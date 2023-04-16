@@ -12,11 +12,8 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-let result = images.map((e) => `<li><img src=${e.url} alt=${e.alt}></li>`)
+let result = images.map((e) => `<li><img style='width:100%,height:100%'  src=${e.url} alt=${e.alt}></li>`)
 .join("");
-document.querySelector('.gallery').innerHTML=result
-document.querySelector('.gallery').style.display = 'flex'
-document.querySelectorAll('img').forEach(e => {
-  e.style.width = '100%'
-  e.style.height = '100%'
-})
+const galleryEl = document.querySelector('.gallery')
+galleryEl.innerHTML=result
+galleryEl.style.display = 'flex'
