@@ -8,5 +8,5 @@ const colortxt = document.querySelector('.color')
 changeColorBtn.addEventListener('click',e => {
   let nowColor = getRandomHexColor()
   colortxt.textContent = nowColor
-  document.querySelector('body').style.backgroundColor = nowColor
+  document.body.style.backgroundColor = nowColor
 })

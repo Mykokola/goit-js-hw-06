@@ -12,8 +12,8 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-let result = images.map((e) => `<li><img style={width:100%,height:100%}  src=${e.url} alt=${e.alt}></li>`)
-.join("");
+let result = images.map((e) => `<li><img style="width:100%;height:100%; "  src=${e.url} alt=${e.alt}></li>`)
+  .join("");
 const galleryEl = document.querySelector('.gallery')
-galleryEl.innerHTML=result
+galleryEl.insertAdjacentHTML('beforeend', result)
 galleryEl.style.display = 'flex'
