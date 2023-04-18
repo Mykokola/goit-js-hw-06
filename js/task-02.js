@@ -13,12 +13,12 @@ const ingredientsList = document.querySelector("#ingredients");
 //   elemList.classList.add('item')
 //   ingredientsList.append(elemList)
 // })
-let result = [];
-ingredients.forEach((item) => {
+
+let  result =  ingredients.map((item) => {
   const elemList = document.createElement("li");
   elemList.textContent = item;
   elemList.classList.add("item");
-  result.push(elemList);
+  return elemList
 });
 ingredientsList.append(...result);
 //ВИРІШИВ ЗРОБИТИ 2 СПОСОБАМИ НЕ ЗНАВ ЯКИЙ БІЛЬШ ПІДХОДЯЩИЙ

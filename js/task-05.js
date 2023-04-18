@@ -1,7 +1,8 @@
-document.querySelector("#name-input").addEventListener("input", (e) => {
-  document.querySelector("#name-output").textContent =
-    document.querySelector("#name-input").value;
-  if (document.querySelector("#name-input").value == "") {
-    document.querySelector("#name-output").textContent = "Anonymous";
+const nameInputEl = document.querySelector("#name-input")
+const nameOutputEl =  document.querySelector("#name-output")
+nameInputEl.addEventListener("input", (e) => {
+  nameOutputEl.textContent =nameInputEl.value
+  if (nameInputEl.value === "") {
+    nameOutputEl.textContent = "Anonymous";
   }
 });
